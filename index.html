@@ -1,13 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kattubadi Baba Portfolio</title>
-  </head>
-  <body class="bg-gray-900 text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kattubadi Baba | AI & ML Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Animate On Scroll (AOS) Library for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Favicon (optional, but professional) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">KB.</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-down">Kattubadi Baba</h1>
+                <p class="subtitle" data-aos="fade-down" data-aos-delay="200">AI Engineer & LLM Specialist</p>
+                <a href="#projects" class="cta-button" data-aos="fade-up" data-aos-delay="400">View My Work</a>
+            </div>
+        </section>
+
+        <!-- About/Objective Section -->
+        <section id="about" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>Advanced proficiency in artificial intelligence, machine learning, and large language model optimization. I architect innovative solutions to tackle intricate challenges and elevate organizational performance. My expertise lies in natural language processing, model deployment, and leveraging data-driven insights to pioneer transformative technologies.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" data-aos="fade-up">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Oct 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Junior Data Scientist</h3>
+                        <p class="company">BeamX TechLabs PVT LTD, Hyderabad</p>
+                        <ul>
+                            <li>Designed a Podcast Summarizer using Whisper and GPT-4o.</li>
+                            <li>Deployed Llama 3 8B with Text Generation Inference (TGI) for a real-time chat UI.</li>
+                            <li>Performed instruction fine-tuning on LLMs (Llama 3, Qwen 2.5) with LoRA.</li>
+                            <li>Quantized and served LLMs locally using llama.cpp and vLLM on dual RTX 2000 Ada GPUs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2024 - Sep 2024</div>
+                    <div class="timeline-content">
+                        <h3>Intern Data Scientist</h3>
+                        <p class="company">GeekBull Consulting, Hyderabad</p>
+                        <ul>
+                            <li>Developed a RAG pipeline chatbot for financial documents ('InvestiBot').</li>
+                            <li>Pre-processed data, stored embeddings in ChromaDB, and integrated Llama 3 8B.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2020 - Jul 2022</div>
+                    <div class="timeline-content">
+                        <h3>Associate Content Specialist</h3>
+                        <p class="company">Thomson Reuters, Hyderabad</p>
+                        <ul>
+                            <li>Part of the Page Inspection team, maintaining 100% quality for most publications.</li>
+                            <li>Awarded "Shine" for quality maintenance in September, 2021.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" data-aos="fade-up">
+            <h2>Key Projects</h2>
+            <div class="project-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <h3>Podcast Summarizer</h3>
+                    <p>Processed RSS feeds, transcribed audio with Whisper, and generated summaries, hosts, and highlights using GPT-4o. Built a Streamlit UI for accessibility.</p>
+                    <div class="tags"><span>Whisper</span><span>GPT-4o</span><span>Streamlit</span><span>Python</span></div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>LLM Deployment & Fine-Tuning</h3>
+                    <p>Deployed Llama 3 with TGI, fine-tuned models like Llama 3 and Qwen 2.5 using LoRA on a mental health dataset for empathetic responses.</p>
+                     <div class="tags"><span>TGI</span><span>UnSloth</span><span>LoRA</span><span>Hugging Face</span></div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Text-to-SQL with Audio Output</h3>
+                    <p>Integrated Snowflake to convert natural language to SQL queries. Summarized results and converted them to playable audio using gTTS, with a Streamlit interface.</p>
+                     <div class="tags"><span>Snowflake</span><span>SQL</span><span>gTTS</span><span>Streamlit</span></div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>InvestiBot - RAG Financial Chatbot</h3>
+                    <p>A RAG-powered chatbot to process and query financial documents from multiple companies, using Llama 3 8B and ChromaDB for vector storage.</p>
+                    <div class="tags"><span>RAG</span><span>Llama 3</span><span>ChromaDB</span><span>LangChain</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" data-aos="fade-up">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-right">
+                    <h4>AI / ML</h4>
+                    <div class="tags">
+                        <span>Generative AI</span><span>LLM Fine-tuning</span><span>RAG</span><span>NLP</span>
+                        <span>Quantization</span><span>Deep Learning</span><span>Prompt Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-right" data-aos-delay="100">
+                    <h4>Frameworks & Tech</h4>
+                    <div class="tags">
+                        <span>LangChain</span><span>LlamaIndex</span><span>TGI</span><span>vLLM</span><span>Unsloth</span>
+                        <span>Hugging Face</span><span>PyTorch</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-right" data-aos-delay="200">
+                    <h4>Languages & Tools</h4>
+                    <div class="tags">
+                        <span>Python</span><span>R</span><span>SQL</span><span>Git</span><span>Docker</span>
+                        <span>Streamlit</span><span>Gradio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education -->
+        <section id="education" data-aos="fade-up">
+            <h2>Education</h2>
+            <div class="edu-item" data-aos="fade-up">
+                <h3>M.Sc Data Science</h3>
+                <p>Vellore Institute of Technology, Vellore (2022-2024) - CGPA: 8.98</p>
+            </div>
+            <div class="edu-item" data-aos="fade-up" data-aos-delay="100">
+                <h3>B.Sc MSCs</h3>
+                <p>Bhavan's Vivekananda College, Hyderabad (2017-2020) - CGPA: 9.06</p>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" data-aos="fade-up">
+            <h2>Get In Touch</h2>
+            <p>I'm currently seeking new opportunities. Feel free to reach out!</p>
+            <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Kattubadi Baba. Built with ❤️ and deployed on Vercel.</p>
+        <div class="social-links">
+            <!-- IMPORTANT: Replace # with your actual links -->
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Hugging Face</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
